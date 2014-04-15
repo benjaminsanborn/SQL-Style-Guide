@@ -17,7 +17,7 @@ Never name any table, view, function, column name, user after a reserved word. T
 
 ## Naming
 
-All DB names (tables, views, columns) should be in snake_case.
+All DB names (tables, views, functions, columns) should be in snake_case.
 
 ### Tables
 
@@ -34,8 +34,21 @@ CREATE TABLE user_contract (user_id int, contract_id int);
 
 ### Columns
 
+Column names, again, should not be named after reserved words or data types. Ideally, for non-foreign key columns, you should be able to syntactically define the contents of the column by calling it the "<<table_name>>'s <<column_name>>"
+
+  i.e.
+  the USERs NAME
+  the WAREHOUSE_GOODs STOCK_CODE.
+
 #### Primary keys
 If the primary key of a table is a single, autoincrementing integer, it should be named "id".
+
+#### Foreign keys
+A foreign key column should always be named the referenced table followed by "_id".
+
+```
+ALTER TABLE user_code ADD COLUMN user_id REFERENCES user (id);
+```
 
 #### Composite keys
 
