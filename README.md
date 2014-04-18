@@ -66,6 +66,26 @@ Generally, every clause should get its own line.
 ...
 WHERE guests > 1 AND start_time > NOW();
 ```
+
+# DML (Data Manipulation Language)
+
+Hopefully, most SQL you are writing is DML. SQL DML is an incredibly powerful and flexible syntax and, being as such, a very easily abused and obscured language for conveying intent.
+
+## Formatting
+
+## Conventions for clarity
+
+
+# SQL for Applications
+
+## Inline SQL
+
+# SQL Schema Migrations
+
+## Idempotency
+
+## Migration tools
+
 # 
 [http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip]
 _see how many typos you can find!_
