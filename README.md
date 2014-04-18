@@ -3,6 +3,12 @@ SQL Style Guide  - v.0.1
 
 This guide is intended to provide best-practices for SQL in use in Play! frameworks, but can be generally applied.
 
+# DDL (Data Definition Language)
+
+DDL style and convention is the single most important factor in creating a schema that people understand and don't hate you for. Properly documenting your style and convention is the second most important thing you can do. If you are building a schema from scratch, this guide is not for you. I would recommend picking up [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840).
+
+If you're working with an existing schema, understanding both the original spirit of the schema and the best-practices outlined below is essential. The below style conventions need to be balanced with the existing schema to minimize confusion.
+
 ## Reserved Words
 
 Because SQL allows you to write very English-esque statements in many different ways. Therefore, SQL has a lot of reserved words. That is just the way of things. Consult your SQL engines documentation for all reserved words. They include, but are not limited to:
