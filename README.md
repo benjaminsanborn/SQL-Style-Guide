@@ -5,7 +5,7 @@ This guide is intended to provide best-practices for SQL.
 
 # DDL (Data Definition Language)
 
-DDL style and convention is the single most important factor in creating a schema that people understand and don't hate you for. Properly documenting your style and convention is the second most important thing you can do. If you are building a schema from scratch, this guide is not for you. I would recommend picking up [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840). More info under [Further Reading](#Further Reading).
+DDL style and convention is the single most important factor in creating a schema that people understand and don't hate you for. Properly documenting your style and convention is the second most important thing you can do. If you are building a schema from scratch, this guide is not for you. I would recommend picking up [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840). More info under [Further Reading](#further-reading).
 
 If you're working with an existing schema, understanding both the original spirit of the schema and the best-practices outlined below is essential. The below style conventions need to be balanced with the existing schema to minimize confusion.
 
