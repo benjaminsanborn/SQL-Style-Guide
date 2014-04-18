@@ -21,13 +21,13 @@ ABSOLUTE, ALLOCATE, AS, BOTH, CASCADE, CASE, CAST, CHAR, CHARACTER, COALESCE, CO
 
 Never name any table, view, function, column name, user after a reserved word. They are reserved; that reservation is not for you.
 
-## Naming
+## Capitalization
 
 All DB names (tables, views, functions, columns) should be in snake_case.
 
 ### Tables
 
-Tables should always be singular. A single tuple in you table should generally be exactly the name of the table.
+Tables should always be singular. A single tuple in you table should generally be exactly the name of the table. If a table 
 
 #### Linking tables (many-to-many relationships)
 Linking tables should be the snake_case concatenation of the linked tables. The first table is generally the table more "central" to the rest of the schema.
