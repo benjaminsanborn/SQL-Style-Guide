@@ -86,6 +86,6 @@ Hopefully, most SQL you are writing is DML. SQL DML is an incredibly powerful an
 
 ## Migration tools
 
-# 
-[http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip]
-_see how many typos you can find!_
+# Further Reading
+[SQL:2011](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip)
+
