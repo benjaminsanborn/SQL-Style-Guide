@@ -1,11 +1,11 @@
 SQL Style Guide  - v.0.1
 =========================
 
-This guide is intended to provide best-practices for SQL in use in Play! frameworks, but can be generally applied.
+This guide is intended to provide best-practices for SQL.
 
 # DDL (Data Definition Language)
 
-DDL style and convention is the single most important factor in creating a schema that people understand and don't hate you for. Properly documenting your style and convention is the second most important thing you can do. If you are building a schema from scratch, this guide is not for you. I would recommend picking up [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840).
+DDL style and convention is the single most important factor in creating a schema that people understand and don't hate you for. Properly documenting your style and convention is the second most important thing you can do. If you are building a schema from scratch, this guide is not for you. I would recommend picking up [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840). More info under [Further Reading](#Further Reading).
 
 If you're working with an existing schema, understanding both the original spirit of the schema and the best-practices outlined below is essential. The below style conventions need to be balanced with the existing schema to minimize confusion.
 
@@ -87,5 +87,5 @@ Hopefully, most SQL you are writing is DML. SQL DML is an incredibly powerful an
 ## Migration tools
 
 # Further Reading
-[SQL:2011](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip)
-
+[SQL:2011](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) - For reference, this is the current SQL Standard. Check the documentation of your SQL engine for adherence and deviation.
+[Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840) - For actionable guidance on schema design, this is the best book on the market.
