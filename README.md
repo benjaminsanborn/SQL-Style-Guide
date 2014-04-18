@@ -87,5 +87,5 @@ Hopefully, most SQL you are writing is DML. SQL DML is an incredibly powerful an
 ## Migration tools
 
 # Further Reading
-[SQL:2011](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) - For reference, this is the current SQL Standard. Check the documentation of your SQL engine for adherence and deviation.
-[Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840) - For actionable guidance on schema design, this is the best book on the market.
+* [SQL:2011](http://standards.iso.org/ittf/PubliclyAvailableStandards/c053681_ISO_IEC_9075-1_2011.zip) - For reference, this is the current SQL Standard. Check the documentation of your SQL engine for adherence and deviation.
+* [Database Design for Mere Mortals](http://www.amazon.com/Database-Design-Mere-Mortals-Relational/dp/0201752840) - For actionable guidance on schema design, this is the best book on the market.
