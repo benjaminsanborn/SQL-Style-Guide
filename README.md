@@ -56,9 +56,15 @@ user_status
 Linking tables should be the snake_case concatenation of the linked tables. The first table is generally the table more "central" to the rest of the schema.
 
 ```SQL
+-- If the schema is more user concerned
+CREATE TABLE contract (id int, signatories text);
+CREATE TABLE user (id int, name text);
+CREATE TABLE user_contract (user_id int, contract_id int);
+
+-- If the schema is more contract concerned
 CREATE TABLE user (id int, name text);
 CREATE TABLE contract (id int, signatories text);
-CREATE TABLE user_contract (user_id int, contract_id int);
+CREATE TABLE contract_user (contract_id int, user_id int);
 ```
 
 ### Columns
