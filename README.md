@@ -11,7 +11,7 @@ If you're working with an existing schema, understanding both the original spiri
 
 ## Reserved Words
 
-Because SQL allows you to write very English-esque statements in many different ways. Therefore, SQL has a lot of reserved words. That is just the way of things. Consult your SQL engines documentation for all reserved words. They include, but are not limited to:
+SQL allows you to write very English-esque statements in many different ways. Therefore, SQL has a lot of reserved words. Consult your SQL engine's documentation for all reserved words. They include, but are not limited to:
 
 ```
 ABSOLUTE, ALLOCATE, AS, BOTH, CASCADE, CASE, CAST, CHAR, CHARACTER, COALESCE, COLLATE, COLLATION, COLUMN, CONNECTION, CONSTRAINT, CROSS, CURRENT_DATE, CURRENT_TIME, CURRENT_USER, DATE, DAY, DEFERRABLE, DEFERRED,  DESCENDING, DESCRIBE, DISCONNECT, DOMAIN, EXTRACT, FALSE, FULL, IN, INNER, INT, INTEGER, INTERVAL, JOIN, LANGUAGE, LAST, LEFT, LOWER, MINUTE, MONTH, NATURAL, NEXT, NO, NULL, NULLIF, NUMERIC, OUTER, REAL, RELATIVE, RESTRICT, RIGHT, SMALLINT, SQL, SQLSTATE, SUBSTRING, TIME, TIMESTAMP, TRANSLATE, TRANSLATION, TRIM, TRUE, UPPER, USAGE, VALUE, VARCHAR, YEAR
@@ -19,20 +19,43 @@ ABSOLUTE, ALLOCATE, AS, BOTH, CASCADE, CASE, CAST, CHAR, CHARACTER, COALESCE, CO
 
 ### DO NOT USE RESERVED WORDS
 
-Never name any table, view, function, column name, user after a reserved word. They are reserved; that reservation is not for you.
+Never name any table, view, function, column name, or user after a reserved word. They are reserved; that reservation is not for you.
 
-## Capitalization
+## Casing
 
 All DB names (tables, views, functions, columns) should be in snake_case.
 
 ### Tables
 
-Tables should always be singular. A single tuple in you table should generally be exactly the name of the table. If a table 
+Tables should always be singular. A single tuple in you table should generally be exactly the name of the table. If a table is singularly dependent on another table (i.e. a status lookup table) then that table should be named after the parent table. This allows for tables of similar concern to be grouped together.
+
+```SQL
+-- Parent table
+CREATE TABLE user (id serial PRIMARY KEY, name text, user_status_id int);
+
+-- Dependent lookup table
+CREATE TABLE user_status(id serial PRIMARY KEY, status text);
+
+-- Foreign key reference
+ALTER TABLE user
+  ADD FOREIGN KEY fk_user_status_id user (user_status_id)
+  REFERENCES user_status (id);
+```
+
+This naming convention can be extended to any arbitrary depth.
+
+```
+user
+user_action
+user_action_status
+user_action_attribute
+user_status
+```
 
 #### Linking tables (many-to-many relationships)
 Linking tables should be the snake_case concatenation of the linked tables. The first table is generally the table more "central" to the rest of the schema.
 
-```
+```SQL
 CREATE TABLE user (id int, name text);
 CREATE TABLE contract (id int, signatories text);
 CREATE TABLE user_contract (user_id int, contract_id int);
@@ -52,7 +75,7 @@ If the primary key of a table is a single, autoincrementing integer, it should b
 #### Foreign keys
 A foreign key column should always be named the referenced table followed by "_id".
 
-```
+```SQL
 ALTER TABLE user_code ADD COLUMN user_id REFERENCES user (id);
 ```
 
@@ -62,8 +85,7 @@ ALTER TABLE user_code ADD COLUMN user_id REFERENCES user (id);
 
 Generally, every clause should get its own line.
 
-```
-...
+```SQL
 WHERE guests > 1 AND start_time > NOW();
 ```
 
