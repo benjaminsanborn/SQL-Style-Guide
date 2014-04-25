@@ -108,8 +108,12 @@ Hopefully, most SQL you are writing is DML. SQL DML is an incredibly powerful an
 
 ## Inline SQL
 
+Depending on the application framework, there are ce
+
+
 # SQL Schema Migrations
 
+As your application develops, you schema needs to develop along side it. 
 ## Idempotency
 
 ## Migration tools
