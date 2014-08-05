@@ -74,6 +74,16 @@ Column names, again, should not be named after reserved words or data types. Ide
   i.e.
   the USERs NAME
   the WAREHOUSE_GOODs STOCK_CODE.
+  
+#### Boolean types
+
+When possible, boolean column names should be stripped of any logical modifiers and answer a simple question.
+
+  i.e.
+  _BAD_ - ANSWER.IS_NOT_REQUIRED
+  _GOOD_ - ANSWER.IS_REQUIRED
+  
+Although certain SQL engines will force a TINYINT or other on your BOOLEAN columns-- it's best to treat them semantically.
 
 #### Primary keys
 If the primary key of a table is a single, autoincrementing integer, it should be named "id".
